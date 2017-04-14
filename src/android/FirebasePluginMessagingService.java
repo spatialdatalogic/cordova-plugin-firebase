@@ -11,7 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.app.Notification;
 import android.text.TextUtils;
-import android.os.Build;
+import android.os.Build.VERSION_CODES;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -99,7 +99,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             } else {
                 notificationBuilder.setSmallIcon(getApplicationInfo().icon);
             }
-
+		/*
             if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.MARSHMALLOW)
             {
 				int accentID = getResources().getIdentifier("accent", "color", getPackageName());
@@ -112,6 +112,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
 				int notiID = getResources().getIdentifier("notification_big", "drawable", getPackageName());
                 notification.contentView.setImageViewResource(iconID, notiID);
             }
+	    */
             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
             notificationManager.notify(id.hashCode(), notification);
