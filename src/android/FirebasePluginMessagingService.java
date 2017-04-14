@@ -99,6 +99,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             } else {
                 notificationBuilder.setSmallIcon(getApplicationInfo().icon);
             }
+		Notification notification = notificationBuilder.build();
 		/*
             if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.MARSHMALLOW)
             {
@@ -106,7 +107,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
                 notificationBuilder.setColor(getResources().getColor(accentID, null));				
             }
             
-            Notification notification = notificationBuilder.build();
+            
             if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP){
 				int iconID = android.R.id.icon;
 				int notiID = getResources().getIdentifier("notification_big", "drawable", getPackageName());
