@@ -14,7 +14,7 @@ public class OnNotificationOpenReceiver extends BroadcastReceiver {
         PackageManager pm = context.getPackageManager();
         Intent launchIntent = pm.getLaunchIntentForPackage(context.getPackageName());
 
-        launchIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);   //Intent.FLAG_ACTIVITY_CLEAR_TOP | 
         Bundle data = intent.getExtras();
         data.putBoolean("tap", true);
         FirebasePlugin.sendNotification(data);
