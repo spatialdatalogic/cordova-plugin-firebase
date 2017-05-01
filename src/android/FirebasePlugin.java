@@ -136,7 +136,7 @@ public class FirebasePlugin extends CordovaPlugin {
         return false;
     }
 
-    public void setIsBackground(boolean background) {
+    public void setIsBackground(final CallbackContext callbackContext, boolean background) {
         FirebasePlugin.inBackground = background;
     }    
     
