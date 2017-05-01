@@ -111,3 +111,9 @@ exports.setDefaults = function (defaults, namespace, success, error) {
     }
     exec(success, error, "FirebasePlugin", "setDefaults", args);
 };
+
+exports.setIsBackground = function (background, success, error) {
+    var args = [background];
+
+    exec(success, error, "FirebasePlugin", "setIsBackground", args);
+};
