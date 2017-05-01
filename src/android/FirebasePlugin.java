@@ -129,6 +129,9 @@ public class FirebasePlugin extends CordovaPlugin {
             if (args.length() > 1) this.setDefaults(callbackContext, args.getJSONObject(0), args.getString(1));
             else this.setDefaults(callbackContext, args.getJSONObject(0), null);
             return true;
+        } else if (action.equals("setIsBackground")) {
+            this.setIsBackground(callbackContext, args.getBoolean(0));
+            return true;
         }
         return false;
     }
