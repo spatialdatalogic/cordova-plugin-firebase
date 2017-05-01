@@ -133,8 +133,13 @@ public class FirebasePlugin extends CordovaPlugin {
         return false;
     }
 
+    public void setIsBackground(boolean background) {
+        FirebasePlugin.inBackground = background;
+    }    
+    
     @Override
     public void onPause(boolean multitasking) {
+        //these do not get called from tabris....
         FirebasePlugin.inBackground = true;
     }
 
